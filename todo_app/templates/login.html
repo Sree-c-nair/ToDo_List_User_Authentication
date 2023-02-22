@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	{% load static %}
+	<link rel="stylesheet" href="{% static 'css/loginstyle.css' %}">
+    <title>Title</title>
+</head>
+<body>
+
+
+{% block content %}
+<form method ="POST" class="myform" align="center">
+<h1 class ="text-center"> LOGIN HERE....</h1>
+
+
+
+
+		{% csrf_token %}
+
+	  <div class="form-group">
+
+	    <input type="text" class="form-control" placeholder="Enter Username" name = "username">
+
+	  </div><br>
+	  <div class="form-group">
+
+	    <input type="password" class="form-control"  placeholder="Enter Password" name="password">
+	  </div>
+
+
+	  <input type="submit" value="Login">
+<!--      <button type="submit" class="btn">Login</button>-->
+      <center><p class="mytag">Don't have an account ?<a href="{% url 'register' %}"> Create new Account</a> </p></center>
+	</form>
+
+
+
+{% endblock %}
+</body>
+</html>
