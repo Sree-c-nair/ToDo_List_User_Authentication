@@ -5,14 +5,15 @@
 <head>
     <meta charset="UTF-8">
 	{% load static %}
-	<link rel="stylesheet" href="{% static 'css/loginstyle.css' %}">
-    <title>Title</title>
+<!--	<link rel="stylesheet" href="{% static 'css/loginstyle.css' %}">-->
+    <title>Login</title>
 </head>
 <body>
 
 
 {% block content %}
-<form method ="POST" class="myform" align="center">
+
+<center><form method ="POST" class="form2" align="center">
 <h1 class ="text-center"> LOGIN HERE....</h1>
 
 
@@ -33,11 +34,14 @@
 
 	  <input type="submit" value="Login">
 <!--      <button type="submit" class="btn">Login</button>-->
-      <center><p class="mytag">Don't have an account ?<a href="{% url 'register' %}"> Create new Account</a> </p></center>
+
+      <center><p >Don't have an account ?<a href="{% url 'register' %}"> Create new Account</a> </p></center>
+<!--	  <center><p class="mytag">Forgot Password ?<a href="{% url 'change_password' %}"> Change Password</a> </p></center>-->
 	</form>
 
 
 
 {% endblock %}
+	</center>
 </body>
 </html>
